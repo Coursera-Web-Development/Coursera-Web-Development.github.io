@@ -1,0 +1,67 @@
+h1 {background-color:darkgrey;border: solid black;padding: 15px;}
+.mainheading {text-align: center; font-size: 40px; padding: 5px;}
+.subheading {text-align: center; font-size: 30px; padding: 0%; font: bold;}
+.mydiv1 {text-align: justify; background-color:darkgrey; font-size: 20px; width:auto; border: solid 3px;padding: 8px;margin: 15px; float: left; box-sizing: border-box;}
+/*For Screen*/
+@media (min-width:992px){.col-lg-4{float: left; width: 33.33%;}}
+    @media (min-width:768px) and (max-width:991px){ .col-md-6{float: left; width: 50%;}}
+    @media (max-width:767px){.col-sm-12{float:left; width: 100%;}}
+  
+    .container{ display:inline-block;
+                float: right;
+                cursor: pointer;
+                border: solid black 3px;
+            }
+            
+    #sidebarmenu{height: 100%;
+                    position:absolute;
+                    background-color: darkgray;
+                    float: right;
+                    left: 10px;
+                    top: 40px;
+                    width:99%;
+                    margin-top: 60px;
+                    background-color:white;
+                    transform: translateX(-103%);
+                transition: transform 250ms ease-in-out;}
+                    #opensidebarmenu:checked ~ #sidebarmenu{transform: translateX(0px);}
+                    #opensidebarmenu{float: right;}
+       .menu{list-style:none;
+            padding: 0;
+            margin: 0;
+        }
+        .menu li{color: white;
+                border: 3px solid;}
+        .menu li a{color:black;
+                   text-decoration: none;
+                   padding: 10px;
+                }
+.sidebaricontoggle{width: 30px;
+                    height: 20px;
+                    left: 0px;
+                    float: right;
+                    border: solid 3px;
+                    padding: 5px;
+                    background-color: darkgray;
+                    z-index: 20px;
+                    cursor: pointer;
+                    margin-right: 0px;
+                top: 0px;
+            right: 100px;}
+            .sidebaricontoggle:hover { background-color:gray;}
+                       
+              @media only screen and (min-width: 968px) {
+                body {
+                  .sidebaricontoggle{display: none;}
+                    }}
+                   .checkbox{display: none;}    
+            .spinner{height: 3px;
+            background-color:black;
+            transition: all 0.3s;
+        }
+.spinner.middle,
+.spinner.bottom{margin-top: 4px;}
+#opensidebarmenu:checked ~ .sidebaricontoggle > .spinner.middle{opacity: 0;}
+#opensidebarmenu:checked ~ .sidebaricontoggle > .spinner.top{transform: rotate(135deg);; margin-top: 8px;}
+#opensidebarmenu:checked ~ .sidebaricontoggle > .spinner.bottom{transform: rotate(-135deg);margin-top: -9px;}
+.backtotop:hover { background-color:gray;}
